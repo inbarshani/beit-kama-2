@@ -17,70 +17,74 @@
 					<input name="elderly" type="number" min="0" max="4" [(ngModel)]="elderly"/>
       </div>
 					<div class="input">
-						<label for="youngs">בני הישוב 21-28:</label>
-						<input name="youngs" type="number" min="0" max="4" [(ngModel)]="youngs"/>
+						<label for="assisted">סיעודיים:</label>
+						<input name="assisted" type="number" min="0" max="4" [(ngModel)]="assisted"/>
       </div>
 						<div class="input">
-							<label for="hiring">שוכרים מגיל 21:</label>
-							<input name="hiring" type="number" min="0" max="8" [(ngModel)]="hiring"/>
+							<label for="youngs">בני הישוב 21-28:</label>
+							<input name="youngs" type="number" min="0" max="4" [(ngModel)]="youngs"/>
       </div>
+							<div class="input">
+								<label for="hiring">שוכרים מגיל 21:</label>
+								<input name="hiring" type="number" min="0" max="8" [(ngModel)]="hiring"/>
+      </div>
+							</div>
+							<div class="model-results">
+								סכום לפי מודל פר ראש:
+								<table>
+									<thead>
+										<tr>
+											<th>שנה</th>
+											<th>סכום</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2021</td>
+											<td>{{sumPerHead(2021)}}</td>
+										</tr>
+										<tr>
+											<td>2022</td>
+											<td>{{sumPerHead(2022)}}</td>
+										</tr>
+										<tr>
+											<td>2023</td>
+											<td>{{sumPerHead(2023)}}</td>
+										</tr>
+										<tr>
+											<td>2024</td>
+											<td>{{sumPerHead(2024)}}</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="model-results">
+								סכום לפי מודל משולב:
+								<table>
+									<thead>
+										<tr>
+											<th>שנה</th>
+											<th>סכום</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2021</td>
+											<td>{{sumPerHeadAndArea(2021)}}</td>
+										</tr>
+										<tr>
+											<td>2022</td>
+											<td>{{sumPerHeadAndArea(2022)}}</td>
+										</tr>
+										<tr>
+											<td>2023</td>
+											<td>{{sumPerHeadAndArea(2023)}}</td>
+										</tr>
+										<tr>
+											<td>2024</td>
+											<td>{{sumPerHeadAndArea(2024)}}</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
 						</div>
-						<div class="model-results">
-							סכום לפי מודל פר ראש:
-							<table>
-								<thead>
-									<tr>
-										<th>שנה</th>
-										<th>סכום</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>2021</td>
-										<td>{{sumPerHead(2021)}}</td>
-									</tr>
-									<tr>
-										<td>2022</td>
-										<td>{{sumPerHead(2022)}}</td>
-									</tr>
-									<tr>
-										<td>2023</td>
-										<td>{{sumPerHead(2023)}}</td>
-									</tr>
-									<tr>
-										<td>2024</td>
-										<td>{{sumPerHead(2024)}}</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<div class="model-results">
-							סכום לפי מודל משולב:
-							<table>
-								<thead>
-									<tr>
-										<th>שנה</th>
-										<th>סכום</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>2021</td>
-										<td>{{sumPerHeadAndArea(2021)}}</td>
-									</tr>
-									<tr>
-										<td>2022</td>
-										<td>{{sumPerHeadAndArea(2022)}}</td>
-									</tr>
-									<tr>
-										<td>2023</td>
-										<td>{{sumPerHeadAndArea(2023)}}</td>
-									</tr>
-									<tr>
-										<td>2024</td>
-										<td>{{sumPerHeadAndArea(2024)}}</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
